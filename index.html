@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>P.D. Lakshan Janith | Software Engineering Undergraduate</title>
+  <meta name="description" content="Portfolio of P.D. Lakshan Janith – Full Stack Web Developer, Flutter Developer, and Entrepreneur based in Sri Lanka." />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- ✅ YOUR STYLESHEET -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<!-- ════ ANIMATED CANVAS BACKGROUND ════ -->
+<canvas id="bg-canvas"></canvas>
+
+<!-- ════════════════════════════════════════
+     NAVBAR
+════════════════════════════════════════ -->
+<nav id="navbar">
+  <div class="container nav-inner">
+    <a href="#home" class="nav-logo">LJ.</a>
+
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#home" class="active">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+
+    <button class="nav-toggle" id="nav-toggle" aria-label="Open menu">
+      <i class="fas fa-bars"></i>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobile-menu">
+  <button class="mobile-close" id="mobile-close"><i class="fas fa-times"></i></button>
+  <a href="#home" onclick="closeMobile()">Home</a>
+  <a href="#about" onclick="closeMobile()">About</a>
+  <a href="#skills" onclick="closeMobile()">Skills</a>
+  <a href="#experience" onclick="closeMobile()">Experience</a>
+  <a href="#projects" onclick="closeMobile()">Projects</a>
+  <a href="#services" onclick="closeMobile()">Services</a>
+  <a href="#contact" onclick="closeMobile()">Contact</a>
+</div>
+
+<!-- ════════════════════════════════════════
+     HERO SECTION
+════════════════════════════════════════ -->
+<section id="home">
+  <div class="hero-glow"></div>
+  <div class="container">
+    <div class="hero-content">
+
+      <div class="hero-badge">
+        <span class="dot"></span>
+        Available for opportunities
+      </div>
+
+      <h1 class="hero-name">
+        P.D. Lakshan<br />
+        <span class="grad">Janith</span>
+      </h1>
+
+      <div class="hero-titles">
+        <span class="grad" id="typed-text"></span><span id="cursor" style="color:#22d3ee">|</span>
+      </div>
+
+      <p class="hero-intro">
+        Motivated Software Engineering undergraduate with experience in full-stack web development,
+        mobile application development, databases, AI tools, and digital business management.
+        Passionate about building modern web applications and solving real-world problems through technology.
+      </p>
+
+      <div class="hero-cta">
+        <!-- ✅ Put your cv.pdf file in the "My Portfolio" folder -->
+        <a href="cv.pdf" download="Lakshan_Janith_CV.pdf" class="btn btn-primary">
+          <i class="fas fa-download"></i> Download CV
+        </a>
+        <a href="#projects" class="btn btn-outline">
+          <i class="fas fa-rocket"></i> View Projects
+        </a>
+        <a href="#contact" class="btn btn-outline">
+          <i class="fas fa-envelope"></i> Contact Me
+        </a>
+      </div>
+
+      <div class="hero-socials">
+        <!-- ✅ REPLACE links below with your real profile URLs -->
+        <a href="https://github.com/1234Lakshan" target="_blank" class="social-link" title="GitHub">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/lakshan-janith-716029309/" target="_blank" class="social-link" title="LinkedIn">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a href="https://facebook.com/YOUR_FACEBOOK" target="_blank" class="social-link" title="Facebook">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://instagram.com/YOUR_INSTAGRAM" target="_blank" class="social-link" title="Instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="ljanith2001@gmail.com" class="social-link" title="Email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="scroll-hint">
+    <span>Scroll</span>
+    <span class="chevron"><i class="fas fa-chevron-down"></i></span>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     ABOUT SECTION
+════════════════════════════════════════ -->
+<section id="about">
+  <div class="container">
+    <div class="about-grid">
+
+      <!-- Profile Image -->
+      <div class="about-avatar reveal-left">
+        <div>
+          <div class="avatar-ring">
+            <div class="avatar-inner">
+              <!--
+                ✅ HOW TO ADD YOUR PHOTO:
+                1. Copy your photo to the "My Portfolio" folder
+                2. Rename it to "profile.jpg"
+                3. The image will appear automatically!
+              -->
+              <img
+                src="profile.jpg"
+                alt="P.D. Lakshan Janith"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+              />
+              <span class="avatar-fallback" style="display:none;">LJ</span>
+            </div>
+          </div>
+          <div class="avatar-badge">🎓 SE Undergraduate</div>
+        </div>
+      </div>
+
+      <!-- Text Content -->
+      <div class="about-text reveal-right">
+        <div class="section-tag">About Me</div>
+        <h2 class="section-title">Who Am <span class="grad">I?</span></h2>
+        <p>I am currently studying <strong>BSc (Hons) in Information Technology (Software Engineering)</strong> at SLTC Research University.</p>
+        <p>I enjoy building modern web applications, mobile apps, <strong>AI-powered solutions</strong>, and managing digital businesses. My passion lies in turning ideas into functional, aesthetically pleasing, and highly performant digital products.</p>
+        <p>I have experience working as a freelance web developer and currently manage my own e-commerce business, <strong>MrLucky.lk</strong>. I thrive at the intersection of technology and entrepreneurship.</p>
+
+        <div class="stats-grid">
+          <div class="stat-card"><div class="stat-num">3+</div><div class="stat-lbl">Years Experience</div></div>
+          <div class="stat-card"><div class="stat-num">10+</div><div class="stat-lbl">Projects Done</div></div>
+          <div class="stat-card"><div class="stat-num">5+</div><div class="stat-lbl">Happy Clients</div></div>
+          <div class="stat-card"><div class="stat-num">4</div><div class="stat-lbl">Years Education</div></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     SKILLS SECTION
+════════════════════════════════════════ -->
+<section id="skills">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="section-tag">Technical Skills</div>
+      <h2 class="section-title">Technologies I <span class="grad">Work With</span></h2>
+      <p class="section-sub">A curated set of tools, languages, and platforms I use to build high-quality products.</p>
+    </div>
+
+    <!-- Tab Buttons -->
+    <div class="skills-tabs reveal">
+      <button class="tab-btn active" onclick="switchTab('languages', this)">Languages &amp; Frameworks</button>
+      <button class="tab-btn" onclick="switchTab('databases', this)">Databases</button>
+      <button class="tab-btn" onclick="switchTab('tools', this)">Tools &amp; Platforms</button>
+      <button class="tab-btn" onclick="switchTab('ai', this)">AI Tools</button>
+    </div>
+
+    <!-- Tab Panes (filled by JS) -->
+    <div id="tab-languages" class="skill-tab-pane active"></div>
+    <div id="tab-databases" class="skill-tab-pane"></div>
+    <div id="tab-tools" class="skill-tab-pane"></div>
+    <div id="tab-ai" class="skill-tab-pane"></div>
+
+    <!-- Professional Skills -->
+    <div class="pro-skills reveal">
+      <div class="pro-skills-title">Professional Skills</div>
+      <div class="tags-wrap" id="pro-tags"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     EXPERIENCE & EDUCATION SECTION
+════════════════════════════════════════ -->
+<section id="experience">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="section-tag">Background</div>
+      <h2 class="section-title">Experience &amp; <span class="grad">Education</span></h2>
+      <p class="section-sub">My professional journey and academic background that shaped my expertise.</p>
+    </div>
+
+    <div class="exp-edu-grid">
+      <!-- Work Experience Column -->
+      <div class="reveal-left">
+        <div class="exp-col-title"><i class="fas fa-briefcase"></i> Work Experience</div>
+        <div class="timeline">
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-card">
+              <div class="tl-role">Founder &amp; Managing Director</div>
+              <div class="tl-company">MrLucky.lk</div>
+              <span class="tl-date">2024 – Present</span>
+              <p class="tl-desc">Founded and currently managing a fully-fledged e-commerce platform. Responsible for product management, order processing, digital marketing, and responsive UI/UX design.</p>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-card">
+              <div class="tl-role">Freelance Web Developer</div>
+              <div class="tl-company">Self-Employed</div>
+              <span class="tl-date">2022 – 2024</span>
+              <p class="tl-desc">Built custom websites and web applications for clients across various industries. Delivered responsive, performance-optimized solutions using modern tech stacks.</p>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-card">
+              <div class="tl-role">Chief Marketing Officer</div>
+              <div class="tl-company">Wicky Academy</div>
+              <span class="tl-date">2022 – 2023</span>
+              <p class="tl-desc">Developed and executed digital marketing strategies, social media campaigns, and brand awareness initiatives that increased student enrolment significantly.</p>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-card">
+              <div class="tl-role">Wealth Planner</div>
+              <div class="tl-company">AIA Insurance</div>
+              <span class="tl-date">2021 – 2022</span>
+              <p class="tl-desc">Provided personalized financial planning and insurance solutions to clients, developing strong communication and analytical skills.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Education Column -->
+      <div class="reveal-right">
+        <div class="exp-col-title"><i class="fas fa-graduation-cap"></i> Education</div>
+        <div class="timeline">
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-card">
+              <div class="tl-role">BSc (Hons) Information Technology</div>
+              <div class="tl-company">SLTC Research University</div>
+              <span class="tl-date">2022 – 2026</span>
+              <p class="tl-desc">Specialization in Software Engineering. Covers web development, mobile app development, databases, software architecture, AI, and project management.</p>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-card">
+              <div class="tl-role">G.C.E Advanced Level</div>
+              <div class="tl-company">WP/HR/Remuna National College</div>
+              <span class="tl-date">Technology Stream</span>
+              <p class="tl-desc">Studied Engineering Technology, Science for Technology, and ICT. Developed a strong foundation in technical subjects and problem-solving.</p>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-card">
+              <div class="tl-role">G.C.E Ordinary Level</div>
+              <div class="tl-company">WP/HR/Deepaloka National College</div>
+              <span class="tl-date">Completed</span>
+              <p class="tl-desc">Achieved strong results across core subjects with a particular focus on Mathematics, Science, and ICT.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     PROJECTS SECTION
+════════════════════════════════════════ -->
+<section id="projects">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="section-tag">My Work</div>
+      <h2 class="section-title">Featured <span class="grad">Projects</span></h2>
+      <p class="section-sub">A selection of projects I've built, ranging from web apps to mobile and IoT solutions.</p>
+    </div>
+    <!-- Filled by js/main.js -->
+    <div class="projects-grid" id="projects-grid"></div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     SERVICES SECTION
+════════════════════════════════════════ -->
+<section id="services">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="section-tag">What I Offer</div>
+      <h2 class="section-title">My <span class="grad">Services</span></h2>
+      <p class="section-sub">Professional services I offer to help you build, grow, and scale your digital presence.</p>
+    </div>
+    <!-- Filled by js/main.js -->
+    <div class="services-grid" id="services-grid"></div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     CONTACT SECTION
+════════════════════════════════════════ -->
+<section id="contact">
+  <div class="container">
+    <div class="contact-grid">
+
+      <!-- Left: Info -->
+      <div class="reveal-left">
+        <div class="section-tag">Get In Touch</div>
+        <h2 class="section-title">Let's <span class="grad">Connect</span></h2>
+        <p class="section-sub" style="margin-bottom:0;">
+          Whether you have a project in mind, want to collaborate, or just want to say hello — my inbox is always open.
+        </p>
+        <div class="contact-info-list">
+          <div class="contact-item">
+            <div class="contact-item-icon"><i class="fas fa-envelope"></i></div>
+            <div>
+              <div class="contact-item-label">Email</div>
+              <!-- ✅ Replace with your real email -->
+              <div class="contact-item-val">ljanith2001@gmail.com</div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon"><i class="fas fa-phone"></i></div>
+            <div>
+              <div class="contact-item-label">Phone</div>
+              <!-- ✅ Replace with your phone number -->
+              <div class="contact-item-val">+94 76 309 4984</div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <div>
+              <div class="contact-item-label">Location</div>
+              <div class="contact-item-val">Sri Lanka 🇱🇰</div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon"><i class="fas fa-globe"></i></div>
+            <div>
+              <div class="contact-item-label">Website</div>
+              <div class="contact-item-val">mrlucky.lk</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Form -->
+      <div class="reveal-right">
+        <div class="contact-form">
+          <h3 style="font-family:var(--font-head);font-size:1.3rem;font-weight:700;color:#fff;margin-bottom:28px;">
+            Send a Message
+          </h3>
+          <form id="contact-form" onsubmit="handleSubmit(event)">
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="name">Name</label>
+                <input id="name" type="text" class="form-input" placeholder="P.D. Lakshan Janith" required />
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="email">Email</label>
+                <input id="email" type="email" class="form-input" placeholder="ljanith2001@email.com" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="subject">Subject</label>
+              <input id="subject" type="text" class="form-input" placeholder="Project / Collaboration / Hello" />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="message">Message</label>
+              <textarea id="message" class="form-textarea" placeholder="Tell me about your project or idea..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;">
+              <i class="fas fa-paper-plane"></i> Send Message
+            </button>
+            <div id="form-status"></div>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     FOOTER
+════════════════════════════════════════ -->
+<footer>
+  <div class="container">
+    <span class="footer-logo">LJ.</span>
+    <div class="footer-socials">
+      <a href="https://github.com/1234Lakshan" target="_blank" class="social-link"><i class="fab fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/lakshan-janith-716029309" target="_blank" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+      <a href="https://facebook.com/YOUR_FACEBOOK" target="_blank" class="social-link"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://instagram.com/YOUR_INSTAGRAM" target="_blank" class="social-link"><i class="fab fa-instagram"></i></a>
+    </div>
+    <p class="footer-copy">© 2025 <span>P.D. Lakshan Janith</span>. Crafted with ❤️ and lots of ☕</p>
+  </div>
+</footer>
+
+<!-- ✅ YOUR JAVASCRIPT FILE -->
+<script src="js/main.js"></script>
+
+</body>
+</html>
